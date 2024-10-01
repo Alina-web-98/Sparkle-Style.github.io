@@ -2780,7 +2780,6 @@ img {
 .dropdown-toggle {
   background-color: var(--green);
   color: #fff;
-  white-space: pre-wrap;
   border-radius: 10px;
   width: 100%;
   padding-left: 30px;
