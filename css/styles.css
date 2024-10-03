@@ -2597,6 +2597,7 @@ img {
 .paragraph {
   color: #000;
   margin-bottom: 50px;
+  max-width: 600px;
   font-size: 24px;
   font-weight: 400;
   line-height: 120%;
