@@ -5035,3 +5035,9 @@ html.w-mod-js [data-ix="more-block-off"] {
     justify-self: auto;
   }
 }
+
+@media screen and (max-width: 479px) {
+    .title-faq {
+        white-space: pre-wrap;
+    }
+}
