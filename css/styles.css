@@ -3462,7 +3462,6 @@ img {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-template-rows: auto;
-  grid-template-columns: 1.75fr 1fr;
 }
 
 .field {
