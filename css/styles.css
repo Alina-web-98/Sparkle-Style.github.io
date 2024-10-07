@@ -3724,7 +3724,11 @@ img {
 }
 
 .gmail-text.no-phone {
-  color: var(--green);
+  color: #005f5c;
+}
+
+.gmail-text.no-phone:hover {
+  color: #e47e2b;
 }
 
 .text-faq {
