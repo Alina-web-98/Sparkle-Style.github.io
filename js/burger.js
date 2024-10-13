@@ -74,7 +74,6 @@ const monthName = getMonthName(month);
 const Year = date.getFullYear();
 
 
-console.log(formName, formPhone, formComment);
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -86,15 +85,13 @@ form.addEventListener('submit', function (event) {
     comment : formComment.value
   }
 
+
   const templateParams = {
     name: data.name,
-    notes: 'Order a callback',
     message : data.comment,
     phone : data.phone,
-    date: day + '.' + month + monthName + '.' + Year
+    date: day + '.' + monthName + '.' + Year
   };
-
-  const option = 
   
   emailjs.send(serviceId, templateId, templateParams).then(
     (response) => {
@@ -102,11 +99,11 @@ form.addEventListener('submit', function (event) {
       formName.value = '';
       formPhone.value = '';
       formComment.value = '';
+      window.location.href = 'ok.html';
     },
     (error) => {
       console.log('FAILED...', error);
     },
   );
   
-  console.log(data);
 })
