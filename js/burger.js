@@ -107,3 +107,45 @@ form.addEventListener('submit', function (event) {
   );
   
 })
+
+
+
+
+
+
+// form pop-up__form
+
+
+
+const form2 = document.querySelector('.pop-up__form');
+const templateId2 = 'template_o8ubhrs'
+const formPhone2 = document.querySelector('.pop-up__phone');
+
+
+form2.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const data = 
+  {
+    phone : formPhone2.value.replace(/[()\s\-]/g, ''),
+  }
+
+  console.log(data.phone)
+
+  const templateParams = {
+    phone : data.phone,
+    date: day + '.' + monthName + '.' + Year
+  };
+  
+  emailjs.send(serviceId, templateId2, templateParams).then(
+    (response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      formPhone2.value = '';
+      window.location.href = 'ok.html';  
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    },
+  );
+  
+})
